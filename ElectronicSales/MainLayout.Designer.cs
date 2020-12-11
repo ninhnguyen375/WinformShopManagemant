@@ -33,6 +33,12 @@ namespace ElectronicSales
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainLayout));
             this.sideBarPanel = new System.Windows.Forms.Panel();
+            this.customerButton = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.orderButton = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.comboButton = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,14 +50,26 @@ namespace ElectronicSales
             this.catalogIcon = new System.Windows.Forms.PictureBox();
             this.catalogLabel = new System.Windows.Forms.Label();
             this.headerPanel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.roleName = new System.Windows.Forms.Label();
+            this.makeOrderButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.userEmailLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.contentPanel = new System.Windows.Forms.Panel();
-            this.comboListPage = new ElectronicSales.Views.ComboView.ComboListPage();
+            this.customerListPage = new ElectronicSales.UserView.UserListPage();
+            this.orderListPage = new ElectronicSales.Views.UserView.OrderListPage();
+            this.comboListPage = new ElectronicSales.Views.ProductView.ComboListPage();
             this.productListPage = new ElectronicSales.ProductListPage();
             this.catalogListPage = new ElectronicSales.CatalogListPage();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.employeeButton = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.sideBarPanel.SuspendLayout();
+            this.customerButton.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.orderButton.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.comboButton.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.productButton.SuspendLayout();
@@ -59,14 +77,20 @@ namespace ElectronicSales
             this.catalogButton.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.catalogIcon)).BeginInit();
             this.headerPanel.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contentPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.employeeButton.SuspendLayout();
             this.SuspendLayout();
             // 
             // sideBarPanel
             // 
             this.sideBarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.sideBarPanel.Controls.Add(this.employeeButton);
+            this.sideBarPanel.Controls.Add(this.customerButton);
+            this.sideBarPanel.Controls.Add(this.orderButton);
             this.sideBarPanel.Controls.Add(this.comboButton);
             this.sideBarPanel.Controls.Add(this.Brand);
             this.sideBarPanel.Controls.Add(this.productButton);
@@ -76,6 +100,74 @@ namespace ElectronicSales
             this.sideBarPanel.Name = "sideBarPanel";
             this.sideBarPanel.Size = new System.Drawing.Size(200, 500);
             this.sideBarPanel.TabIndex = 0;
+            // 
+            // customerButton
+            // 
+            this.customerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.customerButton.Controls.Add(this.pictureBox4);
+            this.customerButton.Controls.Add(this.label3);
+            this.customerButton.Location = new System.Drawing.Point(0, 259);
+            this.customerButton.Name = "customerButton";
+            this.customerButton.Size = new System.Drawing.Size(200, 39);
+            this.customerButton.TabIndex = 8;
+            this.customerButton.Click += new System.EventHandler(this.customerButton_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(3, 8);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(27, 24);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 1;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.customerButton_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Source Sans Pro", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(36, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 19);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Khách hàng";
+            this.label3.Click += new System.EventHandler(this.customerButton_Click);
+            // 
+            // orderButton
+            // 
+            this.orderButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.orderButton.Controls.Add(this.pictureBox3);
+            this.orderButton.Controls.Add(this.label2);
+            this.orderButton.Location = new System.Drawing.Point(1, 214);
+            this.orderButton.Name = "orderButton";
+            this.orderButton.Size = new System.Drawing.Size(200, 39);
+            this.orderButton.TabIndex = 7;
+            this.orderButton.Click += new System.EventHandler(this.sideBarOrderButton_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(3, 8);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(27, 24);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.sideBarOrderButton_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Source Sans Pro", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(36, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 19);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Đơn hàng";
+            this.label2.Click += new System.EventHandler(this.sideBarOrderButton_Click);
             // 
             // comboButton
             // 
@@ -194,12 +286,47 @@ namespace ElectronicSales
             // headerPanel
             // 
             this.headerPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.headerPanel.Controls.Add(this.panel2);
+            this.headerPanel.Controls.Add(this.makeOrderButton);
             this.headerPanel.Controls.Add(this.panel1);
             this.headerPanel.Controls.Add(this.pictureBox1);
             this.headerPanel.Location = new System.Drawing.Point(200, 0);
             this.headerPanel.Name = "headerPanel";
             this.headerPanel.Size = new System.Drawing.Size(799, 50);
             this.headerPanel.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.roleName);
+            this.panel2.Location = new System.Drawing.Point(526, 25);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(205, 22);
+            this.panel2.TabIndex = 5;
+            // 
+            // roleName
+            // 
+            this.roleName.AutoSize = true;
+            this.roleName.Dock = System.Windows.Forms.DockStyle.Right;
+            this.roleName.Font = new System.Drawing.Font("Source Sans Pro", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roleName.Location = new System.Drawing.Point(158, 0);
+            this.roleName.Name = "roleName";
+            this.roleName.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
+            this.roleName.Size = new System.Drawing.Size(47, 21);
+            this.roleName.TabIndex = 1;
+            this.roleName.Text = "label1";
+            // 
+            // makeOrderButton
+            // 
+            this.makeOrderButton.BackColor = System.Drawing.Color.White;
+            this.makeOrderButton.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.makeOrderButton.Location = new System.Drawing.Point(6, 12);
+            this.makeOrderButton.Margin = new System.Windows.Forms.Padding(0);
+            this.makeOrderButton.Name = "makeOrderButton";
+            this.makeOrderButton.Size = new System.Drawing.Size(160, 33);
+            this.makeOrderButton.TabIndex = 5;
+            this.makeOrderButton.Text = "BÁN HÀNG";
+            this.makeOrderButton.UseVisualStyleBackColor = false;
+            this.makeOrderButton.Click += new System.EventHandler(this.makeOrderButton_Click);
             // 
             // panel1
             // 
@@ -233,6 +360,8 @@ namespace ElectronicSales
             // 
             // contentPanel
             // 
+            this.contentPanel.Controls.Add(this.customerListPage);
+            this.contentPanel.Controls.Add(this.orderListPage);
             this.contentPanel.Controls.Add(this.comboListPage);
             this.contentPanel.Controls.Add(this.productListPage);
             this.contentPanel.Controls.Add(this.catalogListPage);
@@ -240,6 +369,22 @@ namespace ElectronicSales
             this.contentPanel.Name = "contentPanel";
             this.contentPanel.Size = new System.Drawing.Size(799, 441);
             this.contentPanel.TabIndex = 3;
+            // 
+            // customerListPage
+            // 
+            this.customerListPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.customerListPage.Location = new System.Drawing.Point(0, 0);
+            this.customerListPage.Name = "customerListPage";
+            this.customerListPage.Size = new System.Drawing.Size(799, 441);
+            this.customerListPage.TabIndex = 4;
+            // 
+            // orderListPage
+            // 
+            this.orderListPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.orderListPage.Location = new System.Drawing.Point(0, 0);
+            this.orderListPage.Name = "orderListPage";
+            this.orderListPage.Size = new System.Drawing.Size(799, 441);
+            this.orderListPage.TabIndex = 3;
             // 
             // comboListPage
             // 
@@ -265,6 +410,40 @@ namespace ElectronicSales
             this.catalogListPage.Size = new System.Drawing.Size(799, 441);
             this.catalogListPage.TabIndex = 0;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(3, 8);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(27, 24);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 1;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.employeeButton_Click);
+            // 
+            // employeeButton
+            // 
+            this.employeeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.employeeButton.Controls.Add(this.pictureBox5);
+            this.employeeButton.Controls.Add(this.label4);
+            this.employeeButton.Location = new System.Drawing.Point(0, 304);
+            this.employeeButton.Name = "employeeButton";
+            this.employeeButton.Size = new System.Drawing.Size(200, 39);
+            this.employeeButton.TabIndex = 9;
+            this.employeeButton.Click += new System.EventHandler(this.employeeButton_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Source Sans Pro", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(36, 11);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(77, 19);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Nhân viên";
+            this.label4.Click += new System.EventHandler(this.employeeButton_Click);
+            // 
             // MainLayout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -277,6 +456,12 @@ namespace ElectronicSales
             this.Text = "MainLayout";
             this.sideBarPanel.ResumeLayout(false);
             this.sideBarPanel.PerformLayout();
+            this.customerButton.ResumeLayout(false);
+            this.customerButton.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.orderButton.ResumeLayout(false);
+            this.orderButton.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.comboButton.ResumeLayout(false);
             this.comboButton.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -287,10 +472,15 @@ namespace ElectronicSales
             this.catalogButton.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.catalogIcon)).EndInit();
             this.headerPanel.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.contentPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.employeeButton.ResumeLayout(false);
+            this.employeeButton.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -312,9 +502,23 @@ namespace ElectronicSales
         private ProductListPage productListPage;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label userEmailLabel;
-        private Views.ComboView.ComboListPage comboListPage;
+        private Views.ProductView.ComboListPage comboListPage;
         private System.Windows.Forms.Panel comboButton;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel orderButton;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label2;
+        private Views.UserView.OrderListPage orderListPage;
+        private System.Windows.Forms.Button makeOrderButton;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label roleName;
+        private System.Windows.Forms.Panel customerButton;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label3;
+        private UserView.UserListPage customerListPage;
+        private System.Windows.Forms.Panel employeeButton;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -14,7 +14,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ElectronicSales.Views.ComboView
+namespace ElectronicSales.Views.ProductView
 {
     public partial class AddComboForm : Form
     {
@@ -152,7 +152,7 @@ namespace ElectronicSales.Views.ComboView
             form.Show();
         }
 
-        private void handleSelectProduct(object value, Action close)
+        private void handleSelectProduct(object value)
         {
             Product product = (Product)value;
 
@@ -162,8 +162,6 @@ namespace ElectronicSales.Views.ComboView
             products = tmpProducts;
 
             renderCombo();
-
-            close();
         }
 
         private void discountPercentNumber_ValueChanged(object sender, EventArgs e)

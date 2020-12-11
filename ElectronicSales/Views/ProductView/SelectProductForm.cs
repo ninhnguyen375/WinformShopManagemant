@@ -10,17 +10,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ElectronicSales.Views.ComboView
+namespace ElectronicSales.Views.ProductView
 {
     public partial class SelectProductForm : Form
     {
 
         private List<Product> products;
         private List<Product> filteredProducts;
-        private Action<object, Action> _callback;
+        private Action<object> _callback;
         private List<object> _excludes;
 
-        public SelectProductForm(Action<object, Action> callback, List<object> excludes)
+        public SelectProductForm(Action<object> callback, List<object> excludes)
         {
             _callback = callback;
             _excludes = excludes;
@@ -70,8 +70,8 @@ namespace ElectronicSales.Views.ComboView
         {
             if (productList.Columns[e.ColumnIndex].Name == "choose" && e.RowIndex != -1)
             {
-                _callback(products.ElementAt(e.RowIndex), Close);
-                this.Close();
+                _callback(products.ElementAt(e.RowIndex));
+                Close();
             }
         }
 

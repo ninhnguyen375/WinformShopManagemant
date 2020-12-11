@@ -55,16 +55,9 @@ namespace ElectronicSales
 
         public void activeLayout(string role)
         {
-            switch (role)
-            {
-                case Role.Manager:
-                    MainLayout main = new MainLayout();
-                    main.FormClosing += new FormClosingEventHandler((object _, FormClosingEventArgs __) => Close());
-                    main.Show();
-                    break;
-                default:
-                    break;
-            }
+            MainLayout main = new MainLayout();
+            main.FormClosing += new FormClosingEventHandler((object _, FormClosingEventArgs __) => Show());
+            main.Show();
         }
     }
 }

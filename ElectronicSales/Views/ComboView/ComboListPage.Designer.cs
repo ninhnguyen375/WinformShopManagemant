@@ -1,4 +1,4 @@
-﻿namespace ElectronicSales.Views.ComboView
+﻿namespace ElectronicSales.Views.ProductView
 {
     partial class ComboListPage
     {

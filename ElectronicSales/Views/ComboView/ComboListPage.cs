@@ -11,10 +11,10 @@ using ElectronicSales.Models;
 using ElectronicSales.Controllers;
 using ElectronicSales.DTOs.ErrorMessages;
 using ElectronicSales.DTOs.Common;
-using ElectronicSales.Views.ComboView;
+using ElectronicSales.Views.ProductView;
 using ElectronicSales.Helpers;
 
-namespace ElectronicSales.Views.ComboView
+namespace ElectronicSales.Views.ProductView
 {
     public partial class ComboListPage : UserControl
     {
@@ -38,8 +38,21 @@ namespace ElectronicSales.Views.ComboView
         public ComboListPage()
         {
             InitializeComponent();
+
+
             comboGridView.Columns[2].DefaultCellStyle.Format = "N";
+            comboGridView.Columns[2].SortMode = DataGridViewColumnSortMode.NotSortable;
+            comboGridView.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            comboGridView.Columns[2].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight;
+
             comboGridView.Columns[4].DefaultCellStyle.Format = "N";
+            comboGridView.Columns[4].SortMode = DataGridViewColumnSortMode.NotSortable;
+            comboGridView.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            comboGridView.Columns[4].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight;
+
+            comboGridView.Columns[3].SortMode = DataGridViewColumnSortMode.NotSortable;
+            comboGridView.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            comboGridView.Columns[3].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             renderCombos();
         }

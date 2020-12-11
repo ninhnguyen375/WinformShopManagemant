@@ -14,7 +14,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ElectronicSales.Views.ComboView
+namespace ElectronicSales.Views.ProductView
 {
     public partial class EditComboForm : Form
     {
@@ -163,7 +163,7 @@ namespace ElectronicSales.Views.ComboView
             form.Show();
         }
 
-        private void handleSelectProduct(object value, Action close)
+        private void handleSelectProduct(object value)
         {
             Product product = (Product)value;
             insertedProductIds.Add(product.Id);
@@ -174,8 +174,6 @@ namespace ElectronicSales.Views.ComboView
             combo.products = tmpProducts;
 
             renderCombo(false);
-
-            close();
         }
     }
 }

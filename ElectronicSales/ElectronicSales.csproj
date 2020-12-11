@@ -54,13 +54,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants\OrderStatus.cs" />
     <Compile Include="Constants\Role.cs" />
     <Compile Include="Controllers\ComboController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="DTOs\ErrorMessages\ComboErrorMessage.cs" />
+    <Compile Include="DTOs\ErrorMessages\OrderErrorMessage.cs" />
     <Compile Include="DTOs\ErrorMessages\UserErrorMessage.cs" />
+    <Compile Include="DTOs\RequestDTOs\ConfirmOrderDTO.cs" />
     <Compile Include="DTOs\RequestDTOs\CreateComboDTO.cs" />
+    <Compile Include="DTOs\RequestDTOs\CreateOrderDTO.cs" />
     <Compile Include="DTOs\RequestDTOs\UpdateComboDTO.cs" />
+    <Compile Include="Helpers\Format.cs" />
     <Compile Include="Helpers\Notification.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -69,6 +75,9 @@
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Combo.cs" />
+    <Compile Include="Models\ComboOfOrder.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\ProductOfOrder.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Store.cs" />
     <Compile Include="Views\ComboView\AddComboForm.cs">
@@ -101,11 +110,60 @@
     <Compile Include="Views\CatalogView\EditCatalogForm.Designer.cs">
       <DependentUpon>EditCatalogForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\ComboView\SelectProductForm.cs">
+    <Compile Include="Views\ComboView\SelectComboForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\ComboView\SelectProductForm.Designer.cs">
+    <Compile Include="Views\ComboView\SelectComboForm.Designer.cs">
+      <DependentUpon>SelectComboForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductView\SelectProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ProductView\SelectProductForm.Designer.cs">
       <DependentUpon>SelectProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrderView\AcceptOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\OrderView\AcceptOrderForm.Designer.cs">
+      <DependentUpon>AcceptOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserView\CreateUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UserView\CreateUserForm.Designer.cs">
+      <DependentUpon>CreateUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrderView\CreateOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\OrderView\CreateOrderForm.Designer.cs">
+      <DependentUpon>CreateOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrderView\InputAmountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\OrderView\InputAmountForm.Designer.cs">
+      <DependentUpon>InputAmountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrderView\OrderDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\OrderView\OrderDetail.Designer.cs">
+      <DependentUpon>OrderDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrderView\OrderListPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\OrderView\OrderListPage.Designer.cs">
+      <DependentUpon>OrderListPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrderView\OroderErrorMessage.cs" />
+    <Compile Include="Views\OrderView\SelectCustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\OrderView\SelectCustomerForm.Designer.cs">
+      <DependentUpon>SelectCustomerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\ProductView\AddProductForm.cs">
       <SubType>Form</SubType>
@@ -151,6 +209,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\UserView\EditUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UserView\EditUserForm.Designer.cs">
+      <DependentUpon>EditUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserView\UserListPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserView\UserListPage.Designer.cs">
+      <DependentUpon>UserListPage.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,8 +239,32 @@
     <EmbeddedResource Include="Views\CatalogView\EditCatalogForm.resx">
       <DependentUpon>EditCatalogForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\ComboView\SelectProductForm.resx">
+    <EmbeddedResource Include="Views\ComboView\SelectComboForm.resx">
+      <DependentUpon>SelectComboForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ProductView\SelectProductForm.resx">
       <DependentUpon>SelectProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OrderView\AcceptOrderForm.resx">
+      <DependentUpon>AcceptOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserView\CreateUserForm.resx">
+      <DependentUpon>CreateUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OrderView\CreateOrderForm.resx">
+      <DependentUpon>CreateOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OrderView\InputAmountForm.resx">
+      <DependentUpon>InputAmountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OrderView\OrderDetail.resx">
+      <DependentUpon>OrderDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OrderView\OrderListPage.resx">
+      <DependentUpon>OrderListPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OrderView\SelectCustomerForm.resx">
+      <DependentUpon>SelectCustomerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ProductView\AddProductForm.resx">
       <DependentUpon>AddProductForm.cs</DependentUpon>
@@ -196,9 +290,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\UserView\EditUserForm.resx">
+      <DependentUpon>EditUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserView\UserListPage.resx">
+      <DependentUpon>UserListPage.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ElectronicSales.Models.Catalog.datasource" />
+    <None Include="Properties\DataSources\ElectronicSales.Models.Combo.datasource" />
+    <None Include="Properties\DataSources\ElectronicSales.Models.ComboOfOrder.datasource" />
+    <None Include="Properties\DataSources\ElectronicSales.Models.Order.datasource" />
     <None Include="Properties\DataSources\ElectronicSales.Models.Product.datasource" />
+    <None Include="Properties\DataSources\ElectronicSales.Models.ProductOfOrder.datasource" />
+    <None Include="Properties\DataSources\ElectronicSales.Models.User.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

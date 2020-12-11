@@ -1,4 +1,4 @@
-﻿namespace ElectronicSales.Views.ComboView
+﻿namespace ElectronicSales.Views.ProductView
 {
     partial class EditComboForm
     {
@@ -42,12 +42,12 @@
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label8 = new System.Windows.Forms.Label();
             this.discountPercentNumber = new System.Windows.Forms.NumericUpDown();
+            this.button2 = new System.Windows.Forms.Button();
             this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productImageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.inStockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.productOfComboList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.discountPercentNumber)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
@@ -91,10 +91,10 @@
             // idString
             // 
             this.idString.AutoSize = true;
-            this.idString.Font = new System.Drawing.Font("Source Sans Pro", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idString.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idString.Location = new System.Drawing.Point(8, 65);
             this.idString.Name = "idString";
-            this.idString.Size = new System.Drawing.Size(78, 19);
+            this.idString.Size = new System.Drawing.Size(75, 19);
             this.idString.TabIndex = 13;
             this.idString.Text = "Combo ID:";
             // 
@@ -111,10 +111,10 @@
             // originalPrice
             // 
             this.originalPrice.AutoSize = true;
-            this.originalPrice.Font = new System.Drawing.Font("Source Sans Pro", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.originalPrice.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.originalPrice.Location = new System.Drawing.Point(391, 16);
             this.originalPrice.Name = "originalPrice";
-            this.originalPrice.Size = new System.Drawing.Size(57, 19);
+            this.originalPrice.Size = new System.Drawing.Size(56, 19);
             this.originalPrice.TabIndex = 15;
             this.originalPrice.Text = "Giá gốc";
             // 
@@ -131,10 +131,11 @@
             // price
             // 
             this.price.AutoSize = true;
-            this.price.Font = new System.Drawing.Font("Source Sans Pro", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price.ForeColor = System.Drawing.Color.OrangeRed;
             this.price.Location = new System.Drawing.Point(391, 65);
             this.price.Name = "price";
-            this.price.Size = new System.Drawing.Size(79, 19);
+            this.price.Size = new System.Drawing.Size(77, 19);
             this.price.TabIndex = 17;
             this.price.Text = "Giá combo";
             // 
@@ -180,6 +181,16 @@
             this.discountPercentNumber.Size = new System.Drawing.Size(110, 20);
             this.discountPercentNumber.TabIndex = 20;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(395, 88);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(171, 23);
+            this.button2.TabIndex = 21;
+            this.button2.Text = "Thêm sản phẩm vào Combo";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // productNameDataGridViewTextBoxColumn
             // 
             this.productNameDataGridViewTextBoxColumn.DataPropertyName = "ProductName";
@@ -216,20 +227,11 @@
             // 
             this.productBindingSource.DataSource = typeof(ElectronicSales.Models.Product);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(395, 88);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(171, 23);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "Thêm sản phẩm vào Combo";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // EditComboForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(579, 317);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.discountPercentNumber);

@@ -10,5 +10,6 @@ namespace ElectronicSales.Constants
     {
         public const string Manager = "Manager";
         public const string Employee = "Employee";
+        public const string Customer = "Customer";
     }
 }
