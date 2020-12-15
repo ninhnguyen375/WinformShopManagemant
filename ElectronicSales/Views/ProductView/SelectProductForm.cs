@@ -68,6 +68,13 @@ namespace ElectronicSales.Views.ProductView
 
         private void productList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (productList.Columns[e.ColumnIndex].Name == "ProductImage" && e.RowIndex != -1)
+            {
+                ViewImageForm form = new ViewImageForm(filteredProducts.ElementAt(e.RowIndex).ProductImage);
+
+                form.Show();
+            }
+
             if (productList.Columns[e.ColumnIndex].Name == "choose" && e.RowIndex != -1)
             {
                 _callback(products.ElementAt(e.RowIndex));

@@ -35,11 +35,14 @@
             this.tbProductName = new System.Windows.Forms.TextBox();
             this.tbProductPrice = new System.Windows.Forms.TextBox();
             this.cbProductCatalog = new System.Windows.Forms.ComboBox();
+            this.chooseIamgeButton = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.panelImage = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(105, 197);
+            this.button1.Location = new System.Drawing.Point(180, 291);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -96,11 +99,36 @@
             this.cbProductCatalog.Size = new System.Drawing.Size(228, 21);
             this.cbProductCatalog.TabIndex = 7;
             // 
+            // chooseIamgeButton
+            // 
+            this.chooseIamgeButton.Location = new System.Drawing.Point(28, 242);
+            this.chooseIamgeButton.Name = "chooseIamgeButton";
+            this.chooseIamgeButton.Size = new System.Drawing.Size(111, 23);
+            this.chooseIamgeButton.TabIndex = 8;
+            this.chooseIamgeButton.Text = "Choose Image";
+            this.chooseIamgeButton.UseVisualStyleBackColor = true;
+            this.chooseIamgeButton.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // panelImage
+            // 
+            this.panelImage.BackColor = System.Drawing.Color.White;
+            this.panelImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelImage.Location = new System.Drawing.Point(145, 175);
+            this.panelImage.Name = "panelImage";
+            this.panelImage.Size = new System.Drawing.Size(110, 90);
+            this.panelImage.TabIndex = 9;
+            // 
             // AddProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 232);
+            this.ClientSize = new System.Drawing.Size(284, 331);
+            this.Controls.Add(this.panelImage);
+            this.Controls.Add(this.chooseIamgeButton);
             this.Controls.Add(this.cbProductCatalog);
             this.Controls.Add(this.tbProductPrice);
             this.Controls.Add(this.tbProductName);
@@ -123,5 +151,8 @@
         private System.Windows.Forms.TextBox tbProductName;
         private System.Windows.Forms.TextBox tbProductPrice;
         private System.Windows.Forms.ComboBox cbProductCatalog;
+        private System.Windows.Forms.Button chooseIamgeButton;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Panel panelImage;
     }
 }

@@ -13,6 +13,7 @@ using ElectronicSales.DTOs.ErrorMessages;
 using System.Reflection;
 using ElectronicSales.DTOs.Common;
 using ElectronicSales.Helpers;
+using ElectronicSales.Views.ProductView;
 
 namespace ElectronicSales
 {
@@ -79,6 +80,13 @@ namespace ElectronicSales
 
                 EditProductForm editForm = new EditProductForm(this);
                 editForm.Show();
+            }
+
+            if (productGridView.Columns[e.ColumnIndex].Name == "ProductImage" && e.RowIndex != -1)
+            {
+                ViewImageForm form = new ViewImageForm(filteredProducts.ElementAt(e.RowIndex).ProductImage);
+                
+                form.Show();
             }
 
             if (productGridView.Columns[e.ColumnIndex].Name == "Delete" && e.RowIndex != -1)

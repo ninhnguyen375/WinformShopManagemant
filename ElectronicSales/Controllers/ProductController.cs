@@ -1,12 +1,17 @@
 ﻿using ElectronicSales;
+using ElectronicSales.Constants;
 using ElectronicSales.DTOs.ErrorMessages;
 using ElectronicSales.DTOs.ResponseDTOs;
 using ElectronicSales.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace ElectronicSales.Controllers
@@ -26,9 +31,16 @@ namespace ElectronicSales.Controllers
             return res;
         }
 
-        public static async Task<ServerResponse<object, ProductErrorMessage>> CreateProduct(Product product)
+        public static async Task<ServerResponse<object, ProductErrorMessage>> CreateProduct(byte[] productImage, string fileName, Product product)
         {
-            return await FetchApi.PostAsync<ProductErrorMessage>("products", product);
+            MultipartFormDataContent form = new MultipartFormDataContent();
+
+            form.Add(new ByteArrayContent(productImage, 0, productImage.Length), "ProductImageFile", Regex.Replace(fileName, @"[\(\)]", "_"));
+            form.Add(new StringContent(product.ProductName), "ProductName");
+            form.Add(new StringContent(product.Price.ToString()), "Price");
+            form.Add(new StringContent(product.CatalogId.ToString()), "CatalogId");
+
+            return await FetchApi.PostMultipartAsync<ProductErrorMessage>("products", form);
         }
 
         public static async Task<ServerResponse<object, ProductErrorMessage>> UpdateProduct(int productID, Product product)

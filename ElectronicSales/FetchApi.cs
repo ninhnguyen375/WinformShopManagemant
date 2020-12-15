@@ -1,4 +1,5 @@
-﻿using ElectronicSales.DTOs.ErrorMessages;
+﻿using ElectronicSales.Constants;
+using ElectronicSales.DTOs.ErrorMessages;
 using ElectronicSales.DTOs.ResponseDTOs;
 using Newtonsoft.Json;
 using System;
@@ -17,7 +18,7 @@ namespace ElectronicSales
 
         static FetchApi()
         {
-            _client = new HttpClient { BaseAddress = new Uri("http://localhost:5000/api/") };
+            _client = new HttpClient { BaseAddress = new Uri(Config.rootApi) };
 
             _client.DefaultRequestHeaders.Accept.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
@@ -63,6 +64,12 @@ namespace ElectronicSales
         {
             var res = await _client.PostAsJsonAsync(uri, data);
             return await res.Content.ReadAsAsync<ServerResponse<D, M>>();
+        }
+
+        public static async Task<ServerResponse<object, M>> PostMultipartAsync<M>(string uri, MultipartFormDataContent data)
+        {
+            var res = await _client.PostAsync(uri, data);
+            return await res.Content.ReadAsAsync<ServerResponse<object, M>>();
         }
     }
 }

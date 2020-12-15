@@ -32,3 +32,4 @@ C:\Users\ninhn\documents\visual studio 2015\Projects\ElectronicSales\ElectronicS
 C:\Users\ninhn\documents\visual studio 2015\Projects\ElectronicSales\ElectronicSales\obj\Debug\ElectronicSales.Views.UserView.OrderListPage.resources
 C:\Users\ninhn\documents\visual studio 2015\Projects\ElectronicSales\ElectronicSales\obj\Debug\ElectronicSales.Views.UserView.SelectCustomerForm.resources
 C:\Users\ninhn\documents\visual studio 2015\Projects\ElectronicSales\ElectronicSales\obj\Debug\ElectronicSales.Views.UserView.EditUserForm.resources
+C:\Users\ninhn\documents\visual studio 2015\Projects\ElectronicSales\ElectronicSales\obj\Debug\ElectronicSales.Views.ProductView.ViewImageForm.resources

@@ -31,11 +31,11 @@
             this.components = new System.ComponentModel.Container();
             this.addProductButton = new System.Windows.Forms.Button();
             this.productGridView = new System.Windows.Forms.DataGridView();
-            this.inputSearchName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.ProductImage = new System.Windows.Forms.DataGridViewImageColumn();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.inputSearchName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.idStringDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inStockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,23 +77,6 @@
             this.productGridView.TabIndex = 2;
             this.productGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productGridView_CellContentClick);
             // 
-            // inputSearchName
-            // 
-            this.inputSearchName.Location = new System.Drawing.Point(3, 17);
-            this.inputSearchName.Name = "inputSearchName";
-            this.inputSearchName.Size = new System.Drawing.Size(185, 20);
-            this.inputSearchName.TabIndex = 3;
-            this.inputSearchName.TextChanged += new System.EventHandler(this.inputSearchName_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 1);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Search by name:";
-            // 
             // ProductImage
             // 
             this.ProductImage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -121,6 +104,23 @@
             this.Delete.Name = "Delete";
             this.Delete.Text = "Delete";
             this.Delete.UseColumnTextForButtonValue = true;
+            // 
+            // inputSearchName
+            // 
+            this.inputSearchName.Location = new System.Drawing.Point(3, 17);
+            this.inputSearchName.Name = "inputSearchName";
+            this.inputSearchName.Size = new System.Drawing.Size(185, 20);
+            this.inputSearchName.TabIndex = 3;
+            this.inputSearchName.TextChanged += new System.EventHandler(this.inputSearchName_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(0, 1);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Search by name:";
             // 
             // idStringDataGridViewTextBoxColumn
             // 

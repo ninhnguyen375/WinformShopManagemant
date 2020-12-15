@@ -8,8 +8,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -19,6 +21,8 @@ namespace ElectronicSales
     {
         ProductListPage _productListPage;
         ErrorProvider errorProvider;
+        private byte[] productImage;
+        private string fileName;
 
         public AddProductForm(ProductListPage productListPage)
         {
@@ -84,15 +88,18 @@ namespace ElectronicSales
                 return;
             }
 
-            var res = await ProductController.CreateProduct(new Product
-            {
-                ProductName = productName,
-                Price = Convert.ToDecimal(productPrice),
-                InStock = 0,
-                CatalogId = catalogID
-            });
+            var res = await ProductController.CreateProduct(
+                productImage,
+                fileName,
+                new Product
+                {
+                    ProductName = productName,
+                    Price = Convert.ToDecimal(productPrice),
+                    InStock = 0,
+                    CatalogId = catalogID
+                });
 
-            if(!res.IsSuccess)
+            if (!res.IsSuccess)
             {
                 Notification.Error(HandleError<ProductErrorMessage>.GetErrorString(res.Messages));
                 return;
@@ -103,6 +110,25 @@ namespace ElectronicSales
             _productListPage.renderProducts();
 
             this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DialogResult result = openFileDialog1.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                fileName = Path.GetFileName(openFileDialog1.FileName);
+                productImage = File.ReadAllBytes(openFileDialog1.FileName);
+
+                try
+                {
+                    MemoryStream ms = new MemoryStream(productImage);
+                    panelImage.BackgroundImage = Image.FromStream(ms);
+                }
+                catch (Exception)
+                {
+                }
+            }
         }
     }
 }
