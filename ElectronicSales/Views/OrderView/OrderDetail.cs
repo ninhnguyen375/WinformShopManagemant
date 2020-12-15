@@ -23,6 +23,7 @@ namespace ElectronicSales.Views.UserView
         public OrderDetail(int orderID)
         {
             InitializeComponent();
+            CenterToScreen();
             // format price
             productOfOrderList.Columns[2].SortMode = DataGridViewColumnSortMode.NotSortable;
             productOfOrderList.Columns[4].SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -94,6 +95,16 @@ namespace ElectronicSales.Views.UserView
 
             comboOfOrderList.DataSource = order.Combos;
             productOfOrderList.DataSource = order.Products;
+        }
+
+        private void status_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

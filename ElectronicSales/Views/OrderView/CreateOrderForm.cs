@@ -176,6 +176,12 @@ namespace ElectronicSales.Views.UserView
 
             if(string.IsNullOrWhiteSpace(deliveryAddress.Text))
             {
+                Notification.Error("Vui lòng chọn khánh hàng");
+                return;
+            }
+
+            if (customer == null)
+            {
                 Notification.Error("Vui lòng điền địa chỉ giao hàng");
                 return;
             }

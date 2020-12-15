@@ -33,6 +33,9 @@ namespace ElectronicSales
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainLayout));
             this.sideBarPanel = new System.Windows.Forms.Panel();
+            this.employeeButton = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.customerButton = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -62,10 +65,9 @@ namespace ElectronicSales
             this.comboListPage = new ElectronicSales.Views.ProductView.ComboListPage();
             this.productListPage = new ElectronicSales.ProductListPage();
             this.catalogListPage = new ElectronicSales.CatalogListPage();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.employeeButton = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.sideBarPanel.SuspendLayout();
+            this.employeeButton.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.customerButton.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.orderButton.SuspendLayout();
@@ -81,8 +83,6 @@ namespace ElectronicSales
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contentPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.employeeButton.SuspendLayout();
             this.SuspendLayout();
             // 
             // sideBarPanel
@@ -100,6 +100,40 @@ namespace ElectronicSales
             this.sideBarPanel.Name = "sideBarPanel";
             this.sideBarPanel.Size = new System.Drawing.Size(200, 500);
             this.sideBarPanel.TabIndex = 0;
+            // 
+            // employeeButton
+            // 
+            this.employeeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.employeeButton.Controls.Add(this.pictureBox5);
+            this.employeeButton.Controls.Add(this.label4);
+            this.employeeButton.Location = new System.Drawing.Point(0, 304);
+            this.employeeButton.Name = "employeeButton";
+            this.employeeButton.Size = new System.Drawing.Size(200, 39);
+            this.employeeButton.TabIndex = 9;
+            this.employeeButton.Click += new System.EventHandler(this.employeeButton_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(3, 8);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(27, 24);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 1;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.employeeButton_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Source Sans Pro", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(36, 11);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(77, 19);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Nhân viên";
+            this.label4.Click += new System.EventHandler(this.employeeButton_Click);
             // 
             // customerButton
             // 
@@ -380,7 +414,9 @@ namespace ElectronicSales
             // 
             // orderListPage
             // 
+            this.orderListPage.BackColor = System.Drawing.Color.White;
             this.orderListPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.orderListPage.Font = new System.Drawing.Font("Source Sans Pro", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderListPage.Location = new System.Drawing.Point(0, 0);
             this.orderListPage.Name = "orderListPage";
             this.orderListPage.Size = new System.Drawing.Size(799, 441);
@@ -388,7 +424,9 @@ namespace ElectronicSales
             // 
             // comboListPage
             // 
+            this.comboListPage.BackColor = System.Drawing.Color.White;
             this.comboListPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboListPage.Font = new System.Drawing.Font("Source Sans Pro", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboListPage.Location = new System.Drawing.Point(0, 0);
             this.comboListPage.Name = "comboListPage";
             this.comboListPage.Size = new System.Drawing.Size(799, 441);
@@ -396,7 +434,9 @@ namespace ElectronicSales
             // 
             // productListPage
             // 
+            this.productListPage.BackColor = System.Drawing.Color.White;
             this.productListPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.productListPage.Font = new System.Drawing.Font("Source Sans Pro", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productListPage.Location = new System.Drawing.Point(0, 0);
             this.productListPage.Name = "productListPage";
             this.productListPage.Size = new System.Drawing.Size(799, 441);
@@ -404,45 +444,13 @@ namespace ElectronicSales
             // 
             // catalogListPage
             // 
+            this.catalogListPage.BackColor = System.Drawing.Color.White;
             this.catalogListPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.catalogListPage.Font = new System.Drawing.Font("Source Sans Pro", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.catalogListPage.Location = new System.Drawing.Point(0, 0);
             this.catalogListPage.Name = "catalogListPage";
             this.catalogListPage.Size = new System.Drawing.Size(799, 441);
             this.catalogListPage.TabIndex = 0;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(3, 8);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(27, 24);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 1;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.employeeButton_Click);
-            // 
-            // employeeButton
-            // 
-            this.employeeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            this.employeeButton.Controls.Add(this.pictureBox5);
-            this.employeeButton.Controls.Add(this.label4);
-            this.employeeButton.Location = new System.Drawing.Point(0, 304);
-            this.employeeButton.Name = "employeeButton";
-            this.employeeButton.Size = new System.Drawing.Size(200, 39);
-            this.employeeButton.TabIndex = 9;
-            this.employeeButton.Click += new System.EventHandler(this.employeeButton_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Source Sans Pro", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(36, 11);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 19);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Nhân viên";
-            this.label4.Click += new System.EventHandler(this.employeeButton_Click);
             // 
             // MainLayout
             // 
@@ -456,6 +464,9 @@ namespace ElectronicSales
             this.Text = "MainLayout";
             this.sideBarPanel.ResumeLayout(false);
             this.sideBarPanel.PerformLayout();
+            this.employeeButton.ResumeLayout(false);
+            this.employeeButton.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.customerButton.ResumeLayout(false);
             this.customerButton.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -478,9 +489,6 @@ namespace ElectronicSales
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.contentPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.employeeButton.ResumeLayout(false);
-            this.employeeButton.PerformLayout();
             this.ResumeLayout(false);
 
         }

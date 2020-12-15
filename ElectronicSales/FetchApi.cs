@@ -71,5 +71,18 @@ namespace ElectronicSales
             var res = await _client.PostAsync(uri, data);
             return await res.Content.ReadAsAsync<ServerResponse<object, M>>();
         }
+
+        public static async Task<ServerResponse<object, M>> PutMultipartAsync<M>(string uri, MultipartFormDataContent data)
+        {
+            try
+            {
+                var res = await _client.PutAsync(uri, data);
+                return await res.Content.ReadAsAsync<ServerResponse<object, M>>();
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
     }
 }

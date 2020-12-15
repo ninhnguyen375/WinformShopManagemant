@@ -30,10 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             this.comboOfOrderList = new System.Windows.Forms.DataGridView();
+            this.idStringDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comboNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comboOfOrderBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.productOfOrderList = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productOfOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,21 +59,12 @@
             this.orderTotalPrice = new System.Windows.Forms.Label();
             this.deliveryAddress = new System.Windows.Forms.Label();
             this.deliveryDate = new System.Windows.Forms.Label();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productOfOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idStringDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comboNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comboOfOrderBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.comboOfOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboOfOrderBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.comboOfOrderList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboOfOrderBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productOfOrderList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productOfOrderBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboOfOrderBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboOfOrderBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboOfOrderBindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -82,16 +82,44 @@
             this.amountDataGridViewTextBoxColumn,
             this.TotalPrice});
             this.comboOfOrderList.DataSource = this.comboOfOrderBindingSource2;
-            this.comboOfOrderList.Location = new System.Drawing.Point(14, 311);
+            this.comboOfOrderList.Location = new System.Drawing.Point(14, 334);
             this.comboOfOrderList.Name = "comboOfOrderList";
             this.comboOfOrderList.Size = new System.Drawing.Size(555, 152);
             this.comboOfOrderList.TabIndex = 19;
+            // 
+            // idStringDataGridViewTextBoxColumn
+            // 
+            this.idStringDataGridViewTextBoxColumn.DataPropertyName = "IdString";
+            this.idStringDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idStringDataGridViewTextBoxColumn.Name = "idStringDataGridViewTextBoxColumn";
+            // 
+            // comboNameDataGridViewTextBoxColumn
+            // 
+            this.comboNameDataGridViewTextBoxColumn.DataPropertyName = "ComboName";
+            this.comboNameDataGridViewTextBoxColumn.HeaderText = "ComboName";
+            this.comboNameDataGridViewTextBoxColumn.Name = "comboNameDataGridViewTextBoxColumn";
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Single Price";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            // 
+            // amountDataGridViewTextBoxColumn
+            // 
+            this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
+            this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
+            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
             // 
             // TotalPrice
             // 
             this.TotalPrice.DataPropertyName = "TotalPrice";
             this.TotalPrice.HeaderText = "Total Price";
             this.TotalPrice.Name = "TotalPrice";
+            // 
+            // comboOfOrderBindingSource2
+            // 
+            this.comboOfOrderBindingSource2.DataSource = typeof(ElectronicSales.Models.ComboOfOrder);
             // 
             // productOfOrderList
             // 
@@ -106,10 +134,16 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.productOfOrderList.DataSource = this.productOfOrderBindingSource;
-            this.productOfOrderList.Location = new System.Drawing.Point(14, 136);
+            this.productOfOrderList.Location = new System.Drawing.Point(14, 159);
             this.productOfOrderList.Name = "productOfOrderList";
             this.productOfOrderList.Size = new System.Drawing.Size(555, 158);
             this.productOfOrderList.TabIndex = 21;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdString";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
             // ProductName
             // 
@@ -117,11 +151,27 @@
             this.ProductName.HeaderText = "ProductName";
             this.ProductName.Name = "ProductName";
             // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Price";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Single Price";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Amount";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Amount";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "TotalPrice";
             this.dataGridViewTextBoxColumn5.HeaderText = "Total Price";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // productOfOrderBindingSource
+            // 
+            this.productOfOrderBindingSource.DataSource = typeof(ElectronicSales.Models.ProductOfOrder);
             // 
             // label1
             // 
@@ -137,7 +187,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 43);
+            this.label2.Location = new System.Drawing.Point(11, 54);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 15);
             this.label2.TabIndex = 23;
@@ -157,7 +207,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(396, 2);
+            this.label4.Location = new System.Drawing.Point(225, 54);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(102, 15);
             this.label4.TabIndex = 25;
@@ -167,17 +217,18 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(225, 43);
+            this.label5.Location = new System.Drawing.Point(396, 2);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 15);
             this.label5.TabIndex = 26;
             this.label5.Text = "Status:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(396, 43);
+            this.label6.Location = new System.Drawing.Point(396, 54);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 15);
             this.label6.TabIndex = 27;
@@ -187,7 +238,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(225, 86);
+            this.label7.Location = new System.Drawing.Point(225, 105);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(100, 15);
             this.label7.TabIndex = 28;
@@ -197,7 +248,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(11, 86);
+            this.label8.Location = new System.Drawing.Point(11, 105);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(82, 15);
             this.label8.TabIndex = 29;
@@ -227,7 +278,7 @@
             // 
             this.employeeName.AutoSize = true;
             this.employeeName.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employeeName.Location = new System.Drawing.Point(395, 17);
+            this.employeeName.Location = new System.Drawing.Point(224, 69);
             this.employeeName.Name = "employeeName";
             this.employeeName.Size = new System.Drawing.Size(112, 19);
             this.employeeName.TabIndex = 32;
@@ -237,7 +288,7 @@
             // 
             this.createdAt.AutoSize = true;
             this.createdAt.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createdAt.Location = new System.Drawing.Point(10, 58);
+            this.createdAt.Location = new System.Drawing.Point(10, 69);
             this.createdAt.Name = "createdAt";
             this.createdAt.Size = new System.Drawing.Size(72, 19);
             this.createdAt.TabIndex = 33;
@@ -248,18 +299,19 @@
             this.status.AutoSize = true;
             this.status.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.status.ForeColor = System.Drawing.Color.Blue;
-            this.status.Location = new System.Drawing.Point(224, 58);
+            this.status.Location = new System.Drawing.Point(395, 17);
             this.status.Name = "status";
             this.status.Size = new System.Drawing.Size(47, 19);
             this.status.TabIndex = 34;
             this.status.Text = "status";
+            this.status.Click += new System.EventHandler(this.status_Click);
             // 
             // orderTotalPrice
             // 
             this.orderTotalPrice.AutoSize = true;
             this.orderTotalPrice.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderTotalPrice.ForeColor = System.Drawing.Color.OrangeRed;
-            this.orderTotalPrice.Location = new System.Drawing.Point(395, 58);
+            this.orderTotalPrice.Location = new System.Drawing.Point(395, 69);
             this.orderTotalPrice.Name = "orderTotalPrice";
             this.orderTotalPrice.Size = new System.Drawing.Size(111, 19);
             this.orderTotalPrice.TabIndex = 35;
@@ -269,7 +321,7 @@
             // 
             this.deliveryAddress.AutoSize = true;
             this.deliveryAddress.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deliveryAddress.Location = new System.Drawing.Point(224, 101);
+            this.deliveryAddress.Location = new System.Drawing.Point(224, 120);
             this.deliveryAddress.Name = "deliveryAddress";
             this.deliveryAddress.Size = new System.Drawing.Size(111, 19);
             this.deliveryAddress.TabIndex = 36;
@@ -279,61 +331,11 @@
             // 
             this.deliveryDate.AutoSize = true;
             this.deliveryDate.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deliveryDate.Location = new System.Drawing.Point(10, 101);
+            this.deliveryDate.Location = new System.Drawing.Point(10, 120);
             this.deliveryDate.Name = "deliveryDate";
             this.deliveryDate.Size = new System.Drawing.Size(91, 19);
             this.deliveryDate.TabIndex = 37;
             this.deliveryDate.Text = "deliveryDate";
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdString";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Price";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Single Price";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Amount";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Amount";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // productOfOrderBindingSource
-            // 
-            this.productOfOrderBindingSource.DataSource = typeof(ElectronicSales.Models.ProductOfOrder);
-            // 
-            // idStringDataGridViewTextBoxColumn
-            // 
-            this.idStringDataGridViewTextBoxColumn.DataPropertyName = "IdString";
-            this.idStringDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idStringDataGridViewTextBoxColumn.Name = "idStringDataGridViewTextBoxColumn";
-            // 
-            // comboNameDataGridViewTextBoxColumn
-            // 
-            this.comboNameDataGridViewTextBoxColumn.DataPropertyName = "ComboName";
-            this.comboNameDataGridViewTextBoxColumn.HeaderText = "ComboName";
-            this.comboNameDataGridViewTextBoxColumn.Name = "comboNameDataGridViewTextBoxColumn";
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Single Price";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            // 
-            // amountDataGridViewTextBoxColumn
-            // 
-            this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
-            this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
-            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
-            // 
-            // comboOfOrderBindingSource2
-            // 
-            this.comboOfOrderBindingSource2.DataSource = typeof(ElectronicSales.Models.ComboOfOrder);
             // 
             // comboOfOrderBindingSource
             // 
@@ -348,7 +350,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(579, 475);
+            this.ClientSize = new System.Drawing.Size(579, 498);
             this.Controls.Add(this.deliveryDate);
             this.Controls.Add(this.deliveryAddress);
             this.Controls.Add(this.orderTotalPrice);
@@ -370,9 +372,9 @@
             this.Name = "OrderDetail";
             this.Text = "OrderDetail";
             ((System.ComponentModel.ISupportInitialize)(this.comboOfOrderList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboOfOrderBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productOfOrderList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productOfOrderBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboOfOrderBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboOfOrderBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboOfOrderBindingSource1)).EndInit();
             this.ResumeLayout(false);

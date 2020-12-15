@@ -46,116 +46,120 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(13, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
+            this.label1.Size = new System.Drawing.Size(44, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Họ tên:";
             // 
             // tbName
             // 
-            this.tbName.Location = new System.Drawing.Point(16, 29);
+            this.tbName.Location = new System.Drawing.Point(16, 33);
             this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(256, 20);
+            this.tbName.Size = new System.Drawing.Size(256, 23);
             this.tbName.TabIndex = 1;
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(16, 79);
+            this.tbEmail.Location = new System.Drawing.Point(16, 91);
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(256, 20);
+            this.tbEmail.Size = new System.Drawing.Size(256, 23);
             this.tbEmail.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 62);
+            this.label2.Location = new System.Drawing.Point(13, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(38, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "Email:";
             // 
             // tbPhone
             // 
-            this.tbPhone.Location = new System.Drawing.Point(16, 129);
+            this.tbPhone.Location = new System.Drawing.Point(16, 149);
             this.tbPhone.Name = "tbPhone";
-            this.tbPhone.Size = new System.Drawing.Size(256, 20);
+            this.tbPhone.Size = new System.Drawing.Size(256, 23);
             this.tbPhone.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 112);
+            this.label3.Location = new System.Drawing.Point(13, 129);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 13);
+            this.label3.Size = new System.Drawing.Size(77, 15);
             this.label3.TabIndex = 4;
             this.label3.Text = "Số điện thoại:";
             // 
             // tbAddress
             // 
-            this.tbAddress.Location = new System.Drawing.Point(16, 180);
+            this.tbAddress.Location = new System.Drawing.Point(16, 208);
             this.tbAddress.Name = "tbAddress";
-            this.tbAddress.Size = new System.Drawing.Size(256, 20);
+            this.tbAddress.Size = new System.Drawing.Size(256, 23);
             this.tbAddress.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 163);
+            this.label4.Location = new System.Drawing.Point(13, 188);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.Size = new System.Drawing.Size(44, 15);
             this.label4.TabIndex = 6;
             this.label4.Text = "Địa chỉ:";
             // 
             // tbPassword
             // 
-            this.tbPassword.Location = new System.Drawing.Point(16, 234);
+            this.tbPassword.Location = new System.Drawing.Point(16, 270);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '*';
-            this.tbPassword.Size = new System.Drawing.Size(256, 20);
+            this.tbPassword.Size = new System.Drawing.Size(256, 23);
             this.tbPassword.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 217);
+            this.label5.Location = new System.Drawing.Point(13, 250);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 13);
+            this.label5.Size = new System.Drawing.Size(57, 15);
             this.label5.TabIndex = 8;
             this.label5.Text = "Mật khẩu:";
             // 
             // tbConfirmPassword
             // 
-            this.tbConfirmPassword.Location = new System.Drawing.Point(16, 288);
+            this.tbConfirmPassword.Location = new System.Drawing.Point(16, 332);
             this.tbConfirmPassword.Name = "tbConfirmPassword";
             this.tbConfirmPassword.PasswordChar = '*';
-            this.tbConfirmPassword.Size = new System.Drawing.Size(256, 20);
+            this.tbConfirmPassword.Size = new System.Drawing.Size(256, 23);
             this.tbConfirmPassword.TabIndex = 11;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 271);
+            this.label6.Location = new System.Drawing.Point(13, 313);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 13);
+            this.label6.Size = new System.Drawing.Size(102, 15);
             this.label6.TabIndex = 10;
             this.label6.Text = "Nhập lại mật khẩu:";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(197, 321);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.button1.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(158, 378);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(114, 34);
             this.button1.TabIndex = 12;
-            this.button1.Text = "Thêm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Text = "THÊM MỚI";
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // CreateUserForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(294, 354);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(294, 424);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tbConfirmPassword);
             this.Controls.Add(this.label6);
@@ -169,8 +173,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbName);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Source Sans Pro", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "CreateUserForm";
-            this.Text = "Add new user";
+            this.Text = "Thêm mới";
             this.ResumeLayout(false);
             this.PerformLayout();
 

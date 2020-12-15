@@ -43,9 +43,17 @@ namespace ElectronicSales.Controllers
             return await FetchApi.PostMultipartAsync<ProductErrorMessage>("products", form);
         }
 
-        public static async Task<ServerResponse<object, ProductErrorMessage>> UpdateProduct(int productID, Product product)
+        public static async Task<ServerResponse<object, ProductErrorMessage>> UpdateProduct(int productID, byte[] productImage, string fileName, Product product)
         {
-            return await FetchApi.PutAsync<ProductErrorMessage>("products/" + productID, product);
+            MultipartFormDataContent form = new MultipartFormDataContent();
+
+            form.Add(new ByteArrayContent(productImage, 0, productImage.Length), "ProductImageFile", Regex.Replace(fileName, @"[\(\)]", "_"));
+            form.Add(new StringContent(product.ProductName), "ProductName");
+            form.Add(new StringContent(product.Price.ToString()), "Price");
+            form.Add(new StringContent(product.CatalogId.ToString()), "CatalogId");
+            form.Add(new StringContent(product.InStock.ToString()), "InStock");
+
+            return await FetchApi.PutMultipartAsync<ProductErrorMessage>("products/" + productID, form);
         }
 
         public static async Task<ServerResponse<object, ProductErrorMessage>> DeleteProduct(int productID)

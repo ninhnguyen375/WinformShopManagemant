@@ -165,7 +165,6 @@
     <Compile Include="Views\OrderView\OrderListPage.Designer.cs">
       <DependentUpon>OrderListPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\OrderView\OroderErrorMessage.cs" />
     <Compile Include="Views\OrderView\SelectCustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>

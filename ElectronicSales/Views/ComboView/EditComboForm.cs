@@ -140,6 +140,12 @@ namespace ElectronicSales.Views.ProductView
 
         private void productOfComboList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (productOfComboList.Columns[e.ColumnIndex].Name == "ProductImage" && e.RowIndex != -1)
+            {
+                ViewImageForm form = new ViewImageForm(combo.products.ElementAt(e.RowIndex).ProductImage);
+
+                form.Show();
+            }
             if (productOfComboList.Columns[e.ColumnIndex].Name == "Delete" && e.RowIndex != -1)
             {
                 if (Notification.Confirm("Are you sure?"))

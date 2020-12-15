@@ -88,6 +88,12 @@ namespace ElectronicSales
                 return;
             }
 
+            if(productImage == null)
+            {
+                Notification.Error("Vui lòng chọn hình ảnh");
+                return;
+            }
+
             var res = await ProductController.CreateProduct(
                 productImage,
                 fileName,

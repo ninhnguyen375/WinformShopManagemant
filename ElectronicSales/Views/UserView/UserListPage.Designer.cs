@@ -61,9 +61,9 @@
             this.Edit,
             this.Delete});
             this.userGridView.DataSource = this.userBindingSource;
-            this.userGridView.Location = new System.Drawing.Point(3, 53);
+            this.userGridView.Location = new System.Drawing.Point(3, 61);
             this.userGridView.Name = "userGridView";
-            this.userGridView.Size = new System.Drawing.Size(793, 375);
+            this.userGridView.Size = new System.Drawing.Size(793, 377);
             this.userGridView.TabIndex = 4;
             this.userGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.userGridView_CellContentClick);
             // 
@@ -119,39 +119,44 @@
             // 
             // addUserButton
             // 
-            this.addUserButton.Location = new System.Drawing.Point(620, 24);
+            this.addUserButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.addUserButton.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addUserButton.ForeColor = System.Drawing.Color.White;
+            this.addUserButton.Location = new System.Drawing.Point(620, 23);
             this.addUserButton.Name = "addUserButton";
-            this.addUserButton.Size = new System.Drawing.Size(176, 23);
+            this.addUserButton.Size = new System.Drawing.Size(176, 32);
             this.addUserButton.TabIndex = 3;
-            this.addUserButton.Text = "Add New User";
-            this.addUserButton.UseVisualStyleBackColor = true;
+            this.addUserButton.Text = "TẠO MỚI";
+            this.addUserButton.UseVisualStyleBackColor = false;
             this.addUserButton.Click += new System.EventHandler(this.addUserButton_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 10);
+            this.label1.Location = new System.Drawing.Point(0, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 13);
+            this.label1.Size = new System.Drawing.Size(90, 15);
             this.label1.TabIndex = 6;
             this.label1.Text = "Search by name:";
             // 
             // inputSearchName
             // 
-            this.inputSearchName.Location = new System.Drawing.Point(3, 26);
+            this.inputSearchName.Location = new System.Drawing.Point(3, 30);
             this.inputSearchName.Name = "inputSearchName";
-            this.inputSearchName.Size = new System.Drawing.Size(185, 20);
+            this.inputSearchName.Size = new System.Drawing.Size(185, 23);
             this.inputSearchName.TabIndex = 5;
             this.inputSearchName.TextChanged += new System.EventHandler(this.inputSearchName_TextChanged);
             // 
             // UserListPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.inputSearchName);
             this.Controls.Add(this.userGridView);
             this.Controls.Add(this.addUserButton);
+            this.Font = new System.Drawing.Font("Source Sans Pro", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "UserListPage";
             this.Size = new System.Drawing.Size(799, 441);
             ((System.ComponentModel.ISupportInitialize)(this.userGridView)).EndInit();
